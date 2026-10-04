@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda - Hotel de Lujo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css"> 
+    <link rel="stylesheet" href="../assets/css/layout.css"> 
+</head>
+<body>
+
+    <header class="header-global">
+        <h1 class="logo" style="color: var(--color-primario);">HOTEL EL ALGARROBO</h1>
+        <nav>
+            <a href="#" class="btn-secundario">Mi Reserva</a>
+        </nav>
+    </header>
+
+    <main class="layout-busqueda">
+
+        <aside class="barra-filtros">
+            <h2 style="font-family: var(--font-titulo);">Modificar Búsqueda</h2>
+            <form action="#">
+                <div class="campo-filtro">
+                    <label for="fecha-llegada">Llegada</label>
+                    <input type="date" id="fecha-llegada">
+                </div>
+                <div class="campo-filtro">
+                    <label for="fecha-salida">Salida</label>
+                    <input type="date" id="fecha-salida">
+                </div>
+
+                <div class="campo-filtro">
+                    <label for="huespedes">Huéspedes</label>
+                    <input type="number" id="huespedes" value="2">
+                </div>
+                <button type="submit" class="btn-secundario">Actualizar</button>
+            </form>
+            <hr>
+            <h3 style="font-family: var(--font-titulo);">Servicios</h3>
+            <div class="checkbox-filtro">
+                <input type="checkbox" id="wifi"> <label for="wifi">Wi-Fi Gratis</label>
+            </div>
+            <div class="checkbox-filtro">
+                <input type="checkbox" id="piscina"> <label for="piscina">Piscina Climatizada</label>
+            </div>
+        </aside>
+
+       <section class="listado-habitaciones">
+    <h2 style="font-family: var(--font-titulo);">Habitaciones Disponibles</h2>
+    
+    <article class="tarjeta-habitacion">
+        <div class="imagen-habitacion">
+            [Galería de Imágenes de la Suite]
+        </div>
+        <div class="info-habitacion">
+            <h3 style="font-family: var(--font-titulo);">Suite</h3>
+            <p style="color: var(--color-texto-secundario);">La máxima expresión de lujo. 150m² con balcon.</p>
+            <ul class="amenidades">
+                <li>Cama King Size</li>
+                <li>Jacuzzi privado</li>
+                <li>Servicio de mayordomo</li>
+            </ul>
+        </div>
+        <div class="precio-reserva">
+            <span class="precio-base">$100 USD</span>
+            <p style="color: var(--color-texto-secundario);">Por noche</p>
+            <a href="checkout-pago.html" class="btn-primario">Seleccionar y Reservar</a>
+        </div>
+    </article>
+
+    <article class="tarjeta-habitacion">
+        <div class="imagen-habitacion">
+            [Imagen Habitación Doble]
+        </div>
+        <div class="info-habitacion">
+            <h3 style="font-family: var(--font-titulo);">Doble Deluxe</h3>
+            <p style="color: var(--color-texto-secundario);">Elegancia y comodidad para dos personas. Decoración de vanguardia.</p>
+            <ul class="amenidades">
+                <li>2 Camas Queen</li>
+                <li>Balcón privado</li>
+                <li>Mini bar premium</li>
+            </ul>
+        </div>
+        <div class="precio-reserva">
+            <span class="precio-base">$70 USD</span>
+            <p style="color: var(--color-texto-secundario);">Por noche</p>
+            <a href="checkout-pago.html" class="btn-primario">Seleccionar y Reservar</a>
+        </div>
+    </article>
+
+    <article class="tarjeta-habitacion">
+        <div class="imagen-habitacion">
+            [Imagen Suite Ejecutiva]
+        </div>
+        <div class="info-habitacion">
+            <h3 style="font-family: var(--font-titulo);">Suite Ejecutiva</h3>
+            <p style="color: var(--color-texto-secundario);">Ideal para viajes de negocios con un toque de distinción.</p>
+            <ul class="amenidades">
+                <li>Escritorio ergonómico</li>
+                <li>Acceso al Lounge VIP</li>
+                <li>Cafetera Nespresso</li>
+            </ul>
+        </div>
+        <div class="precio-reserva">
+            <span class="precio-base">$50 USD</span>
+            <p style="color: var(--color-texto-secundario);">Por noche</p>
+            <a href="checkout-pago.html" class="btn-primario">Seleccionar y Reservar</a>
+        </div>
+    </article>
+</section>
+    </main>
+
+    <footer class="footer-global">
+        <p>&copy; 2025 Hotel El Algarrobo. | Políticas de Privacidad</p>
+    </footer>
+
+</body>
+</html>
