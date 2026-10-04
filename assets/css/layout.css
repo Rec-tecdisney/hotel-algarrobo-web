@@ -1,0 +1,65 @@
+/* =======================================
+   1. LAYOUT DE BÚSQUEDA Y RESULTADOS
+   ======================================= */
+.layout-busqueda {
+    /* Estructura principal de 2 columnas */
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Columna de filtros de ancho fijo, resultados flexible */
+    gap: var(--espacio-lg); /* Espaciado entre columnas */
+    max-width: 1200px;
+    margin: var(--espacio-lg) auto; /* Centrar el contenido */
+    padding: 0 var(--espacio-lg);
+}
+
+.barra-filtros {
+    padding: var(--espacio-md);
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    position: sticky; /* La barra de filtros se queda fija al hacer scroll */
+    top: 20px;
+    height: fit-content;
+}
+
+.listado-habitaciones {
+    padding-right: var(--espacio-md);
+}
+
+
+/* =======================================
+   2. LAYOUT DE CHECKOUT / PAGO
+   ======================================= */
+.layout-checkout-pago {
+    /* Estructura principal de 2 columnas para el checkout */
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Formulario (2 partes) y Resumen (1 parte) */
+    gap: var(--espacio-lg);
+    max-width: 1100px;
+    margin: var(--espacio-lg) auto;
+    padding: 0 var(--espacio-lg);
+}
+
+.formulario-principal {
+    padding-right: var(--espacio-lg);
+}
+
+/* Barra de progreso (progreso-pasos) */
+.progreso-pasos {
+    display: flex;
+    justify-content: center;
+    padding: var(--espacio-md) 0;
+    margin-top: var(--espacio-sm);
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.paso-activo {
+    font-weight: 700;
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 5px;
+    margin: 0 var(--espacio-md);
+}
+
+.paso-completo {
+    color: var(--color-texto-secundario);
+    margin: 0 var(--espacio-md);
+}
