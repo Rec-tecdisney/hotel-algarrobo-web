@@ -3,118 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados de Búsqueda - Hotel de Lujo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css"> 
-    <link rel="stylesheet" href="assets/css/layout.css"> 
+    <title>Hotel El Algarrobo - Resultados de Búsqueda</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f6f8; margin: 0; padding: 20px; }
+        header { text-align: center; margin-bottom: 30px; }
+        header h1 { color: #1b4332; margin-bottom: 5px; }
+        header p { color: #555; }
+        .grid-habitaciones { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .card-habitacion { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 20px; display: flex; flex-direction: column; justify-content: space-between; border-top: 5px solid #2d6a4f; }
+        .card-habitacion h2 { font-size: 1.25rem; color: #1b4332; margin-top: 0; }
+        .card-habitacion p { color: #666; font-size: 0.95rem; line-height: 1.4; }
+        .precio { font-size: 1.4rem; font-weight: bold; color: #2d6a4f; margin: 15px 0; }
+        .btn-reservar { display: inline-block; text-align: center; background-color: #2d6a4f; color: white; padding: 10px 15px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+        .btn-reservar:hover { background-color: #1b4332; }
+    </style>
 </head>
 <body>
 
-    <header class="header-global">
-        <h1 class="logo" style="color: var(--color-primario);">HOTEL EL ALGARROBO</h1>
-        <nav>
-            <a href="#" class="btn-secundario">Mi Reserva</a>
-        </nav>
+    <header>
+        <h1>Hotel El Algarrobo</h1>
+        <p>Habitaciones disponibles para tu estancia</p>
     </header>
 
-    <main class="layout-busqueda">
-
-        <aside class="barra-filtros">
-            <h2 style="font-family: var(--font-titulo);">Modificar Búsqueda</h2>
-            <form action="#">
-                <div class="campo-filtro">
-                    <label for="fecha-llegada">Llegada</label>
-                    <input type="date" id="fecha-llegada">
-                </div>
-                <div class="campo-filtro">
-                    <label for="fecha-salida">Salida</label>
-                    <input type="date" id="fecha-salida">
-                </div>
-
-                <div class="campo-filtro">
-                    <label for="huespedes">Huéspedes</label>
-                    <input type="number" id="huespedes" value="2">
-                </div>
-                <button type="submit" class="btn-secundario">Actualizar</button>
-            </form>
-            <hr>
-            <h3 style="font-family: var(--font-titulo);">Servicios</h3>
-            <div class="checkbox-filtro">
-                <input type="checkbox" id="wifi"> <label for="wifi">Wi-Fi Gratis</label>
+    <main class="grid-habitaciones">
+        <!-- Habitación 1 -->
+        <article class="card-habitacion">
+            <div>
+                <h2>Suite de Lujo</h2>
+                <p>La Suite de Lujo cuenta con jacuzzi, vista panorámica y servicio exclusivo a la habitación.</p>
             </div>
-            <div class="checkbox-filtro">
-                <input type="checkbox" id="piscina"> <label for="piscina">Piscina Climatizada</label>
+            <div>
+                <div class="precio">$250.000 COP <small>/ noche</small></div>
+                <a href="front-office/checkout-pago.html" class="btn-reservar">Ver Detalle y Reservar</a>
             </div>
-        </aside>
+        </article>
 
-       <section class="listado-habitaciones">
-    <h2 style="font-family: var(--font-titulo);">Habitaciones Disponibles</h2>
-    
-    <article class="tarjeta-habitacion">
-        <div class="imagen-habitacion">
-            [Galería de Imágenes de la Suite]
-        </div>
-        <div class="info-habitacion">
-            <h3 style="font-family: var(--font-titulo);">Suite</h3>
-            <p style="color: var(--color-texto-secundario);">La máxima expresión de lujo. 150m² con balcon.</p>
-            <ul class="amenidades">
-                <li>Cama King Size</li>
-                <li>Jacuzzi privado</li>
-                <li>Servicio de mayordomo</li>
-            </ul>
-        </div>
-        <div class="precio-reserva">
-            <span class="precio-base">$100 USD</span>
-            <p style="color: var(--color-texto-secundario);">Por noche</p>
-            <a href="checkout-pago.html" class="btn-primario">Seleccionar y Reservar</a>
-        </div>
-    </article>
+        <!-- Habitación 2 -->
+        <article class="card-habitacion">
+            <div>
+                <h2>Habitación Doble</h2>
+                <p>Perfecta para parejas o amigos. Incluye dos camas de alto confort y área de trabajo.</p>
+            </div>
+            <div>
+                <div class="precio">$180.000 COP <small>/ noche</small></div>
+                <a href="front-office/checkout-pago.html" class="btn-reservar">Ver Detalle y Reservar</a>
+            </div>
+        </article>
 
-    <article class="tarjeta-habitacion">
-        <div class="imagen-habitacion">
-            [Imagen Habitación Doble]
-        </div>
-        <div class="info-habitacion">
-            <h3 style="font-family: var(--font-titulo);">Doble Deluxe</h3>
-            <p style="color: var(--color-texto-secundario);">Elegancia y comodidad para dos personas. Decoración de vanguardia.</p>
-            <ul class="amenidades">
-                <li>2 Camas Queen</li>
-                <li>Balcón privado</li>
-                <li>Mini bar premium</li>
-            </ul>
-        </div>
-        <div class="precio-reserva">
-            <span class="precio-base">$70 USD</span>
-            <p style="color: var(--color-texto-secundario);">Por noche</p>
-            <a href="checkout-pago.html" class="btn-primario">Seleccionar y Reservar</a>
-        </div>
-    </article>
+        <!-- Habitación 3 -->
+        <article class="card-habitacion">
+            <div>
+                <h2>Habitación Estándar</h2>
+                <p>Ideal para viajes de negocios o estancias cortas. Excelente relación confort y tranquilidad.</p>
+            </div>
+            <div>
+                <div class="precio">$120.000 COP <small>/ noche</small></div>
+                <a href="front-office/checkout-pago.html" class="btn-reservar">Ver Detalle y Reservar</a>
+            </div>
+        </article>
 
-    <article class="tarjeta-habitacion">
-        <div class="imagen-habitacion">
-            [Imagen Suite Ejecutiva]
-        </div>
-        <div class="info-habitacion">
-            <h3 style="font-family: var(--font-titulo);">Suite Ejecutiva</h3>
-            <p style="color: var(--color-texto-secundario);">Ideal para viajes de negocios con un toque de distinción.</p>
-            <ul class="amenidades">
-                <li>Escritorio ergonómico</li>
-                <li>Acceso al Lounge VIP</li>
-                <li>Cafetera Nespresso</li>
-            </ul>
-        </div>
-        <div class="precio-reserva">
-            <span class="precio-base">$50 USD</span>
-            <p style="color: var(--color-texto-secundario);">Por noche</p>
-            <a href="checkout-pago.html" class="btn-primario">Seleccionar y Reservar</a>
-        </div>
-    </article>
-</section>
+        <!-- Habitación 4 -->
+        <article class="card-habitacion">
+            <div>
+                <h2>Habitación Familiar</h2>
+                <p>La opción más económica y amplia, diseñada para el descanso y confort de toda la familia.</p>
+            </div>
+            <div>
+                <div class="precio">$80.000 COP <small>/ noche</small></div>
+                <a href="front-office/checkout-pago.html" class="btn-reservar">Ver Detalle y Reservar</a>
+            </div>
+        </article>
     </main>
-
-    <footer class="footer-global">
-        <p>&copy; 2025 Hotel El Algarrobo. | Políticas de Privacidad</p>
-    </footer>
 
 </body>
 </html>
